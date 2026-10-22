@@ -1,5 +1,3 @@
-import { ALL_CURRENCIES, EXCHANGE_RATES } from "./data/currency.js";
-
 export default function App() {
   return (
     <div className="app-container">

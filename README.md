@@ -9,7 +9,7 @@ Complete the currency converter in `src/App.jsx` using the data in `src/data/cur
 - `ALL_CURRENCIES`: list of `{ code, name }` used to fill the currency dropdowns.
 - `EXCHANGE_RATES`: rates keyed by base currency, read as `EXCHANGE_RATES[from].conversion_rates[to]`.
 
-### Requirements
+#### Requirements
 
 1. Amount input (`data-testid="amount"`) accepts a number.
 2. "Currency" select (`data-testid="from"`) lists all currencies as `Name (CODE)`.
@@ -35,12 +35,12 @@ npm run dev
 
 ## Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start the dev server |
-| `npm run build` | Production build |
+| Command             | Description                  |
+| ------------------- | ---------------------------- |
+| `npm run dev`     | Start the dev server         |
+| `npm run build`   | Production build             |
 | `npm run preview` | Preview the production build |
-| `npm run lint` | Lint with Oxlint |
+| `npm run lint`    | Lint with Oxlint             |
 
 ## Project structure
 
