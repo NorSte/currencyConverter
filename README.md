@@ -1,16 +1,57 @@
-# React + Vite
+# Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Exam coding challenge: a small React + Vite app that converts an amount between currencies.
 
-Currently, two official plugins are available:
+## Task
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Complete the currency converter in `src/App.jsx` using the data in `src/data/currency.js`:
 
-## React Compiler
+- `ALL_CURRENCIES`: list of `{ code, name }` used to fill the currency dropdowns.
+- `EXCHANGE_RATES`: rates keyed by base currency, read as `EXCHANGE_RATES[from].conversion_rates[to]`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Requirements
 
-## Expanding the Oxlint configuration
+1. Amount input (`data-testid="amount"`) accepts a number.
+2. "Currency" select (`data-testid="from"`) lists all currencies as `Name (CODE)`.
+3. "Convert into" select (`data-testid="to"`) lists all currencies in the same format.
+4. Defaults: amount `10`, from `USD`, to `EUR`.
+5. Result (`data-testid="result"`) reads `<amount> <from>` is equal to `<converted> <to>`.
+6. The result updates whenever amount, from or to changes.
+7. Converting a currency into itself gives the same amount.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Hints
+
+- Keep `amount`, `from` and `to` in state with `useState`.
+- Make the inputs controlled: set `value` and `onChange`.
+- Use `key={c.code}` when rendering options.
+- Round the converted amount to 2 decimals for display.
+
+## Getting started
+
+```
+npm install
+npm run dev
+```
+
+## Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Lint with Oxlint |
+
+## Project structure
+
+```
+src/
+  App.jsx            Converter component, Input and Select
+  data/currency.js   Currency list and exchange rates
+  index.css          Styles
+  main.jsx           Entry point
+```
+
+## Stack
+
+React 19, Vite, Oxlint.
