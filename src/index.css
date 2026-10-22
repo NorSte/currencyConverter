@@ -109,3 +109,20 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.currency-fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 12px;
+}
+
+.form-label {
+  padding: 8px 0 4px;
+}
+
+.form-input,
+.form-select {
+  padding: 8px 12px;
+}
